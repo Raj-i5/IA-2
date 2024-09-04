@@ -1,0 +1,12 @@
+import pandas as pd
+data=pd.read_csv(r"D:\spl pro\Book2 for car.csv")
+df=pd.DataFrame(data)
+data.describe()
+print(df)
+horsepower_mean = df['horsepower'].mean()
+print("\nMean horsepower:", horsepower_mean)
+acceleration_std = df['acceleration'].std()
+print("\nStandard Deviation of acceleration:", acceleration_std)
+manufactured_by_year = df['model year'].value_counts()
+print("\nNumber of cars manufactured in each year:")
+print(manufactured_by_year)
